@@ -13,7 +13,9 @@ build:
 		/home/build/keepassxc_$(DEB_VER)_$(DEB_ARCH).deb /dist/
 
 release:
-	git tag $(DEB_VER)
+	if ! git rev-parse $(DEB_VER) >/dev/null 2>/dev/null; then \
+		git tag $(DEB_VER); \
+	fi
 	git push origin main
 	git push origin --tags
 	gh release create -n '' --target main -t $(DEB_VER) $(DEB_VER) \
