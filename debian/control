@@ -5,7 +5,7 @@ Maintainer: Hiroaki Nakamura <hnakamur@gmail.com>
 Rules-Requires-Root: no
 Build-Depends: asciidoctor,
                cmake,
-               debhelper-compat (= 13),
+               debhelper (>= 9),
                libargon2-0-dev,
                libbotan-2-dev (>=2.12.1),
                libusb-1.0-0-dev,
@@ -30,7 +30,7 @@ Build-Depends: asciidoctor,
                xauth,
                xvfb,
                zlib1g-dev
-Standards-Version: 4.6.2
+Standards-Version: 3.9.8
 Homepage: https://www.keepassxc.org/
 Vcs-Git: https://github.com/hnakamur/keepassxc-deb.git
 Vcs-Browser: https://github.com/hnakamur/keepassxc-deb

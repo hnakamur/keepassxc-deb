@@ -1,6 +1,6 @@
 DOCKER_IMAGE_NAME=keepassxc-deb
 UPSTREAM_VER=2.7.5
-DEB_VER=$(UPSTREAM_VER)-1hnakamur1debian12
+DEB_VER=$(UPSTREAM_VER)-1hnakamur1ubuntu22.04
 DEB_ARCH=$(shell dpkg --print-architecture)
 
 build:

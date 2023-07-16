@@ -1,4 +1,4 @@
-keepassxc (2.7.5-1hnakamur1debian12) bookworm; urgency=medium
+keepassxc (2.7.5-1hnakamur1ubuntu22.04) jammy; urgency=medium
 
   * Upstream update
 
