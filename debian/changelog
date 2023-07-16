@@ -1,0 +1,5 @@
+keepassxc (2.7.5-1hnakamur1debian12) bookworm; urgency=medium
+
+  * Upstream update
+
+ -- Hiroaki Nakamura <hnakamur@gmail.com>  Sun, 16 Jul 2023 22:46:13 +0900
