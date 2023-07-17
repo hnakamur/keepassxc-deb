@@ -1,10 +1,14 @@
 #!/usr/bin/make -f
-# -*- makefile -*-
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+#DH_VERBOSE = 1
 
-include /usr/share/dpkg/architecture.mk
+DPKG_EXPORT_BUILDFLAGS = 1
+include /usr/share/dpkg/default.mk
 
-export DEB_BUILD_MAINT_OPTIONS=hardening=+all
-export LC_ALL := C.UTF-8
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+export LC_ALL = C.UTF-8
 
 %:
 	dh $@ --parallel
@@ -22,8 +26,4 @@ override_dh_auto_test:
 	dh_auto_test -- \
 	ARGS+="-E testgui\|testcli"
 #	xvfb-run -a --server-args="-screen 0 800x600x24" dh_auto_test -- \
-#	ARGS+="-R testgui" || true
-
-override_dh_makeshlibs:
-	# keepassx only ships plugins
-	dh_makeshlibs -X/usr/lib/$(DEB_HOST_MULTIARCH)/keepassxc
+#	ARGS+="-R testgui"

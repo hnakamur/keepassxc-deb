@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 RUN apt-get update
-RUN apt-get -y install curl debhelper devscripts
+RUN apt-get -y install curl debhelper devscripts equivs
 
 RUN useradd --system build --home-dir /home/build
 COPY --chown=build debian/control /home/build/keepassxc/debian/control
